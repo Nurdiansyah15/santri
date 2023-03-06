@@ -1,0 +1,202 @@
+.content {
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.photo {
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-position: top;
+    background-size: cover;
+}
+
+.name {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.identity {
+    margin-bottom: 20px;
+}
+
+.identity > .card-title {
+    margin: 0 0 5px 0;
+}
+
+.identity h5 {
+    font-weight: 500;
+    font-size: 14px;
+}
+.identity p {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.status-card {
+    background-color: #114f5a;
+    color: #fff;
+    width: max-content;
+    border-radius: 5px;
+}
+.status-card p {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+hr {
+    color: #fff;
+}
+
+.dashboard-content {
+    padding: 0 20px 0 15px;
+}
+
+.content-title {
+    color: #114f5a;
+    font-size: 20px;
+    font-weight: 700;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    margin-bottom: 10px;
+}
+
+.card-green {
+    background-color: #96bb7c;
+    height: max-content;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.card-white {
+    background-color: #fff;
+    height: max-content;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.card-green-title > .title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+.card-white-title > .title {
+    color: #114f5a;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.action-button {
+    display: flex;
+    justify-content: end;
+    color: #fff;
+}
+.action-button a {
+    style: none;
+}
+
+.card-green-content {
+    justify-content: center;
+}
+.card-white-content {
+    justify-content: center;
+}
+
+.item-card-green-content {
+    height: max-content;
+    background-color: #fff;
+    padding: 5px 0px 5px 0px;
+    margin: 0 0 5px 0;
+    border-radius: 5px;
+}
+.item-card-white-content {
+    height: max-content;
+    background-color: #96bb7c;
+    padding: 5px 0px 5px 0px;
+    margin: 0 0 5px 0;
+    border-radius: 5px;
+}
+.item-card-green-content > .title {
+    display: flex;
+    align-items: center;
+}
+.item-card-white-content > .title {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.item-card-green-content > .more-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.item-card-white-content > .more-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.percentence {
+    margin: 0 10px 0 0;
+}
+.progress-bar {
+    width: 100%;
+}
+
+.btn-santri {
+    background-color: #114f5a;
+    border-radius: 5px;
+    width: 100px;
+    color: #fff;
+}
+.btn-burger {
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+.btn-burger-white {
+    background: transparent;
+    color: #114f5a;
+    border: none;
+}
+.btn-burger:hover {
+    background: transparent;
+    color: #114f5a;
+    border: none !important;
+}
+.btn-santri:hover {
+    background-color: #96bb7c;
+    border-radius: 5px;
+    width: 100px;
+    color: #fff;
+}
+.table {
+    color: #fff;
+}
+.label-presence {
+    background-color: rgb(110, 231, 69);
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+    width: max-content;
+}
+.label-presence.alfa {
+    background-color: rgb(231, 69, 69);
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+    width: max-content;
+}
+.label-presence.permi {
+    background-color: rgb(234, 213, 16);
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+    width: max-content;
+}
+
+@media only screen and (max-width: 768px) {
+}
