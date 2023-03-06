@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Http;
 
 class CheckTokenAvailable
 {
@@ -19,6 +20,22 @@ class CheckTokenAvailable
     public function handle(Request $request, Closure $next)
     {
         if (Cookie::get('sipon_session') !== null) {
+
+            $token = json_decode(Cookie::get('sipon_session'))->token;
+
+            $response = Http::withHeaders([
+                'Accept' => 'aplication/json',
+                'Authorization' => 'Bearer ' . $token,
+            ])->get('http://127.0.0.1:8888/api/v1/token');
+
+            if ($response->status() != 200) {
+
+                setcookie('sipon_session', '', time() - 1);
+
+                //https://sipon.kyaigalangsewu.net/logout
+                return redirect('http://127.0.0.1:8888/logout');
+            }
+
             return $next($request);
         } else {
             if ($request->data) {

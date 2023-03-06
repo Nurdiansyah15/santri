@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Cookie;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,16 @@ Route::middleware('sipon')->group(function () {
     });
     Route::post('/logout', function () {
 
+        $nis = json_decode(Cookie::get('sipon_session'))->nis;
+
+        //https://sipon.kyaigalangsewu.net/api/logout
+        Http::asForm()->post('http://127.0.0.1:8888/api/logout', [
+            'nis' => $nis
+        ]);
+
         setcookie('sipon_session', '', time() - 1);
 
-        // https://sipon.kyaigalangsewu.net/logout
+        //https://sipon.kyaigalangsewu.net/logout
         return redirect('http://127.0.0.1:8888/logout');
     });
 });
